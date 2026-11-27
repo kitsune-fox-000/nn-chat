@@ -1,7 +1,65 @@
+/* 文字を、丸いフォントにする */
+body {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
 body.container {
   padding-top: 70px;
   padding-bottom: 200px;
 }
+
+/* テーマカラー(水色) */
+.app-navbar {
+  background-color: #2a9ad6;
+}
+.btn-primary {
+  --bs-btn-bg: #2a9ad6;
+  --bs-btn-border-color: #2a9ad6;
+  --bs-btn-hover-bg: #2186bd;
+  --bs-btn-hover-border-color: #2186bd;
+  --bs-btn-active-bg: #1d79ac;
+  --bs-btn-active-border-color: #1d79ac;
+}
+
+/* 吹き出し風のカード */
+.post-card {
+  width: 85%;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.post-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.18);
+}
+/* 自分の投稿: 右寄せ + 水色のふち + うっすら水色の背景(ダークモードでも使える書き方) */
+.post-mine {
+  margin-left: auto;
+  border-color: #2a9ad6;
+  background-color: color-mix(in srgb, #4fb3e8 14%, var(--bs-body-bg));
+}
+
+/* 頭文字の丸いアイコン */
+.avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.avatar-color-0 { background-color: #e0524d; }
+.avatar-color-1 { background-color: #e08a2c; }
+.avatar-color-2 { background-color: #b89a00; }
+.avatar-color-3 { background-color: #3fa75a; }
+.avatar-color-4 { background-color: #1fa2a8; }
+.avatar-color-5 { background-color: #3d7fe0; }
+.avatar-color-6 { background-color: #8a5ce0; }
+.avatar-color-7 { background-color: #d54f9a; }
 root {
   scroll-behavior: auto;
 }
@@ -9,3 +67,13 @@ p.card-text {
   white-space: pre-wrap;
   word-break: break-all;
 }
+
+/* ユーザーごとの名前の色(ライト・ダークどちらでも読める中間の明るさ) */
+.user-color-0 { color: #e0524d; }
+.user-color-1 { color: #e08a2c; }
+.user-color-2 { color: #b89a00; }
+.user-color-3 { color: #3fa75a; }
+.user-color-4 { color: #1fa2a8; }
+.user-color-5 { color: #3d7fe0; }
+.user-color-6 { color: #8a5ce0; }
+.user-color-7 { color: #d54f9a; }
