@@ -4,8 +4,8 @@ window.addEventListener('load', () => {
   window.scrollTo(0, document.body.scrollHeight);
 });
 
-// 入力した文字数を「12 / 500」の形で表示
-const MAX_LENGTH = 500;
+// 入力した文字数を「12 / 150」の形で表示
+const MAX_LENGTH = 150;
 const charCountElement = document.getElementById('char-count');
 function updateCharCount() {
   charCountElement.textContent = `${document.forms['message-form'].elements['content'].value.length} / ${MAX_LENGTH}`;

@@ -11,11 +11,11 @@ html(lang="ja")
     link(rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&display=swap")
     link(rel="stylesheet" href="style.css")
-    title ゆるっとチャット
+    title ひとことチャット
   body.container.overflow-scroll(data-bs-theme=currentTheme)
     nav.navbar.fixed-top.app-navbar
       div.container-fluid
-        h1.text-light.navbar-brand.mx-auto ゆるっとチャット
+        h1.text-light.navbar-brand.mx-auto ひとことチャット
           i.bi-chat-dots-fill.ms-1
         div.dropdown 
           button.btn.btn-outline-light.dropdown-toggle(type="button" id="menu" data-bs-toggle="dropdown" aria-expanded="false") #{user}
@@ -59,10 +59,10 @@ html(lang="ja")
     div.fixed-bottom.p-4.bg-body
       form(method="post" action="/posts" name="message-form").container-fluid.row.g-3
         div.col-12
-          textarea(name="content" rows="4" maxlength="500" placeholder="Ctrl(Command)+Enterで送信できます").form-control
+          textarea(name="content" rows="4" maxlength="150" placeholder="Ctrl(Command)+Enterで送信できます").form-control
           input(type="hidden" name="oneTimeToken" value=oneTimeToken)
         div.col-12
-          small#char-count.text-body-secondary 0 / 500
+          small#char-count.text-body-secondary 0 / 150
           button(type="submit").btn.btn-primary.float-end
             i.bi-send
 
